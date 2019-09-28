@@ -9,7 +9,6 @@ import {
   Radio,
   Select,
   Tooltip,
-  Divider,
 } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi-plugin-react/locale';
 import React, { Component } from 'react';
@@ -22,14 +21,14 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-class BasicForm3 extends Component {
+class Credit extends Component {
   handleSubmit = e => {
     const { dispatch, form } = this.props;
     e.preventDefault();
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         dispatch({
-          type: 'formBasicForm3/submitRegularForm',
+          type: 'credit/submitRegularForm',
           payload: values,
         });
       }
@@ -75,7 +74,7 @@ class BasicForm3 extends Component {
       },
     };
     return (
-      <PageHeaderWrapper content={<FormattedMessage id="form-basic-form3.basic.description" />}>
+      <PageHeaderWrapper content={<FormattedMessage id="credit.basic.description" />}>
         <Card bordered={false}>
           <Form
             onSubmit={this.handleSubmit}
@@ -84,178 +83,96 @@ class BasicForm3 extends Component {
               marginTop: 8,
             }}
           >
-           
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.userId.label" />}
-            >
-              {getFieldDecorator('userId', {
+            <FormItem {...formItemLayout} label={<FormattedMessage id="credit.userId_1.label" />}>
+              {getFieldDecorator('userId_1', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.userId.required',
+                      id: 'credit.userId_1.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.userId.placeholder',
+                    id: 'credit.userId_1.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-
-            <Divider
-              style={{
-                marginBottom: 32,
-              }}
-            />
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.round.label" />}
-            >
-              {getFieldDecorator('round', {
+            <FormItem {...formItemLayout} label={<FormattedMessage id="credit.userId_2.label" />}>
+              {getFieldDecorator('userId_2', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.round.required',
+                      id: 'credit.userId_2.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.round.placeholder',
+                    id: 'credit.userId_2.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-
-            <Divider
-              style={{
-                marginBottom: 32,
-              }}
-            />
-
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.chipValue.label" />}
-            >
-              {getFieldDecorator('chipValue', {
+            <FormItem {...formItemLayout} label={<FormattedMessage id="credit.money.label" />}>
+              {getFieldDecorator('money', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.chipValue.required',
+                      id: 'credit.money.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.chipValue.placeholder',
+                    id: 'credit.money.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.TValue.label" />}
-            >
-              {getFieldDecorator('TValue', {
+            <FormItem {...formItemLayout} label={<FormattedMessage id="credit.returnMoney.label" />}>
+              {getFieldDecorator('returnMoney', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.TValue.required',
+                      id: 'credit.returnMoney.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.TValue.placeholder',
+                    id: 'credit.returnMoney.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.MValue.label" />}
-            >
-              {getFieldDecorator('MValue', {
+            <FormItem {...formItemLayout} label={<FormattedMessage id="credit.circle.label" />}>
+              {getFieldDecorator('circle', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.MValue.required',
+                      id: 'credit.circle.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.MValue.placeholder',
+                    id: 'credit.circle.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-
-            {/* form-basic-form3.price */}
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.price.label" />}
-            >
-              {getFieldDecorator('price', {
-                rules: [
-                  {
-                    required: true,
-                    message: formatMessage({
-                      id: 'form-basic-form3.price.required',
-                    }),
-                  },
-                ],
-              })(
-                <Input
-                  placeholder={formatMessage({
-                    id: 'form-basic-form3.price.placeholder',
-                  })}
-                />,
-              )}
-            </FormItem>
-
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.amount.label" />}
-            >
-              {getFieldDecorator('amount', {
-                rules: [
-                  {
-                    required: true,
-                    message: formatMessage({
-                      id: 'form-basic-form3.amount.required',
-                    }),
-                  },
-                ],
-              })(
-                <Input
-                  placeholder={formatMessage({
-                    id: 'form-basic-form3.amount.placeholder',
-                  })}
-                />,
-              )}
-            </FormItem>
-
-            <Divider
-              style={{
-                marginBottom: 32,
-              }}
-            />
-           
-
 
             <FormItem
               {...submitFormLayout}
@@ -264,14 +181,14 @@ class BasicForm3 extends Component {
               }}
             >
               <Button type="primary" htmlType="submit" loading={submitting}>
-                <FormattedMessage id="form-basic-form3.form.submit" />
+                <FormattedMessage id="credit.form.submit" />
               </Button>
               <Button
                 style={{
                   marginLeft: 8,
                 }}
               >
-                <FormattedMessage id="form-basic-form3.form.save" />
+                <FormattedMessage id="credit.form.save" />
               </Button>
             </FormItem>
           </Form>
@@ -283,6 +200,6 @@ class BasicForm3 extends Component {
 
 export default Form.create()(
   connect(({ loading }) => ({
-    submitting: loading.effects['formBasicForm3/submitRegularForm'],
-  }))(BasicForm3),
+    submitting: loading.effects['credit/submitRegularForm'],
+  }))(Credit),
 );

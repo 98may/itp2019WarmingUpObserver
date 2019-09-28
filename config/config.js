@@ -103,10 +103,10 @@ export default {
           component: '../layouts/BasicLayout',
           authority: ['admin', 'user'],
           routes: [
-            {
-              path: '/',
-              redirect: '/welcome',
-            },
+            // {
+            //   path: '/',
+            //   redirect: '/welcome',
+            // },
             {
               path: '/welcome',
               name: 'welcome',
@@ -115,118 +115,174 @@ export default {
             },
 
             
-
-
-            {
-              name: '上游公司',
-              icon: 'dollar',
-              //changed here
-              path: '/up',
-              routes: [
+              
                 {
-                  path: '/up/show1',
-                  component: './up/show1',
-                  name: '上游公司的信息展示',
-                },
-                {
-                  name: '上游公司的输入',
+                  name: '上游公司',
+                  icon: 'dollar',
                   //changed here
-                  path: '/up/input',
+                  path: '/up',
                   routes: [
                     {
-                      name: '贷款',
-                      path: '/up/input/input1',
-                      component: './up/input/input1',
+                      path: '/up/show1',
+                      component: './up/show1',
+                      name: '上游公司的信息展示',
                     },
                     {
-                      name: '芯片生产',
-                      path: '/up/input/input2',
-                      component: './up/input/input2',
-                    },
-                    {
-                      name: '技术投入',
-                      path: '/up/input/input3',
-                      component: './up/input/input3',
+                      name: '上游公司的输入',
+                      //changed here
+                      path: '/up/input',
+                      routes: [
+                        {
+                          name: '贷款',
+                          path: '/up/input/input1',
+                          component: './up/input/input1',
+                        },
+                        {
+                          name: '芯片生产',
+                          path: '/up/input/input2',
+                          component: './up/input/input2',
+                        },
+                        {
+                          name: '技术投入',
+                          path: '/up/input/input3',
+                          component: './up/input/input3',
+                        },
+                      ],
                     },
                   ],
                 },
-              ],
-            },
 
-            {
-              name: '中游公司',
-              icon: 'dollar',
-              //changed here
-              path: '/middle',
-              routes: [
                 {
-                  path: '/middle/show2',
-                  component: './middle/show2',
-                  name: '中游公司的信息展示',
-                },
-                {
-                  name: '中游公司的输入',
+                  name: '中游公司',
+                  icon: 'dollar',
                   //changed here
-                  path: '/middle/input',
+                  path: '/middle',
                   routes: [
                     {
-                      name: '贷款',
-                      path: '/middle/input/input1',
-                      component: './middle/input/input1',
+                      path: '/middle/show2',
+                      component: './middle/show2',
+                      name: '中游公司的信息展示',
                     },
                     {
-                      name: '手机生产',
-                      path: '/middle/input/input2',
-                      component: './middle/input/input2',
-                    },
-                    {
-                      name: '技术投入',
-                      path: '/middle/input/input3',
-                      component: './middle/input/input3',
+                      name: '中游公司的输入',
+                      //changed here
+                      path: '/middle/input',
+                      routes: [
+                        {
+                          name: '贷款',
+                          path: '/middle/input/input1',
+                          component: './middle/input/input1',
+                        },
+                        {
+                          name: '手机生产',
+                          path: '/middle/input/input2',
+                          component: './middle/input/input2',
+                        },
+                        {
+                          name: '技术投入',
+                          path: '/middle/input/input3',
+                          component: './middle/input/input3',
+                        },
+                      ],
                     },
                   ],
                 },
-              ],
-            },
 
-            {
-              name: '下游公司',
-              icon:'dollar',
-              //changed here
-              path: '/down',
-              routes: [
                 {
-                  path: '/down/show3',
-                  component: './down/show3',
-                  name: '下游公司的信息展示',
-                },
-                {
-                  name: '下游公司的输入',
+                  name: '下游公司',
+                  icon: 'dollar',
                   //changed here
-                  path: '/down/input',
+                  path: '/down',
                   routes: [
                     {
-                      name: '贷款',
-                      path: '/down/input/input1',
-                      component: './down/input/input1',
+                      path: '/down/show3',
+                      component: './down/show3',
+                      name: '下游公司的信息展示',
                     },
                     {
-                      name: '手机销售',
-                      path: '/down/input/input2',
-                      component: './down/input/input2',
-                    },
-                    {
-                      name: '广告投入',
-                      path: '/down/input/input3',
-                      component: './down/input/input3',
+                      name: '下游公司的输入',
+                      //changed here
+                      path: '/down/input',
+                      routes: [
+                        {
+                          name: '贷款',
+                          path: '/down/input/input1',
+                          component: './down/input/input1',
+                        },
+                        {
+                          name: '手机销售',
+                          path: '/down/input/input2',
+                          component: './down/input/input2',
+                        },
+                        {
+                          name: '广告投入',
+                          path: '/down/input/input3',
+                          component: './down/input/input3',
+                        },
+                      ],
                     },
                   ],
                 },
-              ],
-            },
 
+              
+            
+            
+                    {
+                      path: '/angel',
+                      name: '天使投资轮',
+                      icon: 'smile',
+                      component: '../pages/angel',
+                    },
+                    {
+                      name: '游戏罚款',
+                      path: '/penalty',
+                      icon: 'warning',
+                      component: './penalty',
+                    },
+                    {
+                      name: '信息监控',
+                      icon: 'pound',
+                      path: '/profile/basic',
+                      component: './profile/basic',
+                    }, 
+                    {
+                      path: '/',
+                      icon: 'dollar',
+                      name: '组间交易',
+                      routes: [
+                        
+                        {
+                          path: '/top/up',
+                          component: './top/up',
+                          name: '上中游交易',
+                        },
+                        {
+                          name: '中下游交易',
+                          path: '/top/middle',
+                          component: './top/middle',
+                        },
 
+                        
+                  
+                        {
+                          name: '组间资产交流',
+                          path: '/credit',
+                          // icon: 'pound',
+                          component: './credit',
+                        },
+                      ],
+                    },
+                    // {
+                    //       path: '/',
+                    //       redirect: '../',
+                    //     },
 
+                    
+                  
+           
+            
+
+               
             
             {
               component: './404',

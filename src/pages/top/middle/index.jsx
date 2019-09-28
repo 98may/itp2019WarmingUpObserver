@@ -9,7 +9,6 @@ import {
   Radio,
   Select,
   Tooltip,
-  Divider,
 } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi-plugin-react/locale';
 import React, { Component } from 'react';
@@ -22,14 +21,14 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-class BasicForm3 extends Component {
+class Middle extends Component {
   handleSubmit = e => {
     const { dispatch, form } = this.props;
     e.preventDefault();
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         dispatch({
-          type: 'formBasicForm3/submitRegularForm',
+          type: 'exchangeMiddle/submitRegularForm',
           payload: values,
         });
       }
@@ -75,7 +74,7 @@ class BasicForm3 extends Component {
       },
     };
     return (
-      <PageHeaderWrapper content={<FormattedMessage id="form-basic-form3.basic.description" />}>
+      <PageHeaderWrapper content={<FormattedMessage id="exchange-middle.basic.description" />}>
         <Card bordered={false}>
           <Form
             onSubmit={this.handleSubmit}
@@ -84,178 +83,155 @@ class BasicForm3 extends Component {
               marginTop: 8,
             }}
           >
-           
             <FormItem
               {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.userId.label" />}
+              label={<FormattedMessage id="exchange-middle.middle_id.label" />}
             >
-              {getFieldDecorator('userId', {
+              {getFieldDecorator('middle_id', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.userId.required',
+                      id: 'exchange-middle.middle_id.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.userId.placeholder',
+                    id: 'exchange-middle.middle_id.placeholder',
+                  })}
+                />,
+              )}
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label={<FormattedMessage id="exchange-middle.down_id.label" />}
+            >
+              {getFieldDecorator('down_id', {
+                rules: [
+                  {
+                    required: true,
+                    message: formatMessage({
+                      id: 'exchange-middle.down_id.required',
+                    }),
+                  },
+                ],
+              })(
+                <Input
+                  placeholder={formatMessage({
+                    id: 'exchange-middle.down_id.placeholder',
                   })}
                 />,
               )}
             </FormItem>
 
-            <Divider
-              style={{
-                marginBottom: 32,
-              }}
-            />
             <FormItem
               {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.round.label" />}
+              label={<FormattedMessage id="exchange-middle.performance.label" />}
             >
-              {getFieldDecorator('round', {
+              {getFieldDecorator('performance', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.round.required',
+                      id: 'exchange-middle.performance.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.round.placeholder',
+                    id: 'exchange-middle.performance.placeholder',
+                  })}
+                />,
+              )}
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label={<FormattedMessage id="exchange-middle.appearance.label" />}
+            >
+              {getFieldDecorator('appearance', {
+                rules: [
+                  {
+                    required: true,
+                    message: formatMessage({
+                      id: 'exchange-middle.appearance.required',
+                    }),
+                  },
+                ],
+              })(
+                <Input
+                  placeholder={formatMessage({
+                    id: 'exchange-middle.appearance.placeholder',
+                  })}
+                />,
+              )}
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label={<FormattedMessage id="exchange-middle.function.label" />}
+            >
+              {getFieldDecorator('function', {
+                rules: [
+                  {
+                    required: true,
+                    message: formatMessage({
+                      id: 'exchange-middle.function.required',
+                    }),
+                  },
+                ],
+              })(
+                <Input
+                  placeholder={formatMessage({
+                    id: 'exchange-middle.function.placeholder',
                   })}
                 />,
               )}
             </FormItem>
 
-            <Divider
-              style={{
-                marginBottom: 32,
-              }}
-            />
-
             <FormItem
               {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.chipValue.label" />}
-            >
-              {getFieldDecorator('chipValue', {
-                rules: [
-                  {
-                    required: true,
-                    message: formatMessage({
-                      id: 'form-basic-form3.chipValue.required',
-                    }),
-                  },
-                ],
-              })(
-                <Input
-                  placeholder={formatMessage({
-                    id: 'form-basic-form3.chipValue.placeholder',
-                  })}
-                />,
-              )}
-            </FormItem>
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.TValue.label" />}
-            >
-              {getFieldDecorator('TValue', {
-                rules: [
-                  {
-                    required: true,
-                    message: formatMessage({
-                      id: 'form-basic-form3.TValue.required',
-                    }),
-                  },
-                ],
-              })(
-                <Input
-                  placeholder={formatMessage({
-                    id: 'form-basic-form3.TValue.placeholder',
-                  })}
-                />,
-              )}
-            </FormItem>
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.MValue.label" />}
-            >
-              {getFieldDecorator('MValue', {
-                rules: [
-                  {
-                    required: true,
-                    message: formatMessage({
-                      id: 'form-basic-form3.MValue.required',
-                    }),
-                  },
-                ],
-              })(
-                <Input
-                  placeholder={formatMessage({
-                    id: 'form-basic-form3.MValue.placeholder',
-                  })}
-                />,
-              )}
-            </FormItem>
-
-            {/* form-basic-form3.price */}
-            <FormItem
-              {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.price.label" />}
+              label={<FormattedMessage id="exchange-middle.price.label" />}
             >
               {getFieldDecorator('price', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.price.required',
+                      id: 'exchange-middle.price.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.price.placeholder',
+                    id: 'exchange-middle.price.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-
             <FormItem
               {...formItemLayout}
-              label={<FormattedMessage id="form-basic-form3.amount.label" />}
+              label={<FormattedMessage id="exchange-middle.count.label" />}
             >
-              {getFieldDecorator('amount', {
+              {getFieldDecorator('count', {
                 rules: [
                   {
                     required: true,
                     message: formatMessage({
-                      id: 'form-basic-form3.amount.required',
+                      id: 'exchange-middle.count.required',
                     }),
                   },
                 ],
               })(
                 <Input
                   placeholder={formatMessage({
-                    id: 'form-basic-form3.amount.placeholder',
+                    id: 'exchange-middle.count.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-
-            <Divider
-              style={{
-                marginBottom: 32,
-              }}
-            />
-           
-
 
             <FormItem
               {...submitFormLayout}
@@ -264,14 +240,14 @@ class BasicForm3 extends Component {
               }}
             >
               <Button type="primary" htmlType="submit" loading={submitting}>
-                <FormattedMessage id="form-basic-form3.form.submit" />
+                <FormattedMessage id="exchange-middle.form.submit" />
               </Button>
               <Button
                 style={{
                   marginLeft: 8,
                 }}
               >
-                <FormattedMessage id="form-basic-form3.form.save" />
+                <FormattedMessage id="exchange-middle.form.save" />
               </Button>
             </FormItem>
           </Form>
@@ -283,6 +259,6 @@ class BasicForm3 extends Component {
 
 export default Form.create()(
   connect(({ loading }) => ({
-    submitting: loading.effects['formBasicForm3/submitRegularForm'],
-  }))(BasicForm3),
+    submitting: loading.effects['exchangeMiddle/submitRegularForm'],
+  }))(Middle),
 );

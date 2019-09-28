@@ -13,8 +13,10 @@ export default {
   'form-basic-form3.loan.label': '本轮贷款',
   'form-basic-form3.loan.placeholder': '请输入本轮的计划贷款',
 
+  'form-basic-form3.round.label': '第几轮',
+  'form-basic-form3.round.placeholder': '请输入本轮的轮数序号',
+
   'form-basic-form3.chipValue.label':'芯片类型',
-  
   'form-basic-form3.TValue.label':'功能值',
   'form-basic-form3.MValue.label':'美观值',
   'form-basic-form3.amount.label':'计划销售数量',
