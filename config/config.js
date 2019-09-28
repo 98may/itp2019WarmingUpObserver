@@ -261,6 +261,11 @@ export default {
                           path: '/top/middle',
                           component: './top/middle',
                         },
+                        {
+                          name: '下游市场交易',
+                          path: '/top/down',
+                          component: './top/down',
+                        },
 
                         
                   
