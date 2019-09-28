@@ -9,6 +9,8 @@ export default {
   'form-basic-form1.loan.label': '本轮贷款',
   'form-basic-form1.loan.placeholder': '请输入本轮的计划贷款',
 
+  'form-basic-form1.round.label': '第几轮',
+  'form-basic-form1.round.placeholder': '请输入本轮的轮数序号',
   'form-basic-form1.chip1.label': '芯片A',
   'form-basic-form1.chip1.placeholder': '请输入芯片A的计划产量',
   'form-basic-form1.chip2.label': '芯片B',

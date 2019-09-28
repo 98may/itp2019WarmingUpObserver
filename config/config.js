@@ -114,28 +114,7 @@ export default {
               component: './Welcome',
             },
 
-            // {
-            //   path: '/exchange',
-            //   icon: 'dollar',
-            //   name: '组间交易',
-              // routes: [
-              //   {
-              //     path: '/exchange/up',
-              //     component: 'exchange/up',
-              //     name: '上中游交易',
-              //   },
-              //   {
-              //     name: '中下游交易',
-              //     path: '/exchange/middle',
-              //     component: './exchange/middle',
-              //   },
-            //     // {
-            //     //   name: '上下游交易',
-            //     //   path: '/exchange/down',
-            //     //   component: './exchange/down',
-            //     // },
-            //   ],
-            // },
+            
 
 
             {
@@ -248,44 +227,7 @@ export default {
 
 
 
-            // {
-            //   name: '中游公司',
-            //   //changed here
-            //   path: '/form/basic-form2',
-            //   component: './form/basic-form2',
-            // },
-            // {
-            //   name: '下游公司',
-            //   path: '/form/basic-form3',
-            //   component: './form/basic-form3',
-            // },
-            // {
-            //   name: '上游公司 信息显示',
-            //   path: '/profile/basic1js',
-            //   component: './profile/basic1js',
-            // },
-            // {
-            //   name: '中游公司 信息显示',
-            //   path: '/profile/basic2js',
-            //   component: './profile/basic2js',
-            // },
-            // {
-            //   name: '下游公司 信息显示',
-            //   path: '/profile/basic3js',
-            //   component: './profile/basic3js',
-            // },
-
-
-            // {
-            //   name: 'ref_form',
-            //   path: '/form/ref_form',
-            //   component: './form/ref_form',
-            // },
-             // {
-            //   name: 'basic0',
-            //   path: '/profile/basic0',
-            //   component: './profile/basic0',
-            // },
+            
             {
               component: './404',
             },

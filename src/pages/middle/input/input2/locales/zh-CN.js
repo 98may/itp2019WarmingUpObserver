@@ -11,7 +11,8 @@ export default {
   'form-basic-form2.BInvest.label': '本轮的功能模块投入',
   'form-basic-form2.BInvest.placeholder': '请输入本轮的功能模块投入',
 
-
+  'form-basic-form2.round.label': '第几轮',
+  'form-basic-form2.round.placeholder': '请输入本轮的轮数序号',
   'form-basic-form2.chipValue.label':'芯片类型',
   'form-basic-form2.chipValue.placeholder': '请输入本款手机计划的芯片类型',
   'form-basic-form2.TValue.label': '功能值',

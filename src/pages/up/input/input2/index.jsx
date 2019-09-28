@@ -196,6 +196,29 @@ class BasicForm1 extends Component {
                 marginBottom: 32,
               }}
             />
+            
+            <FormItem
+              {...formItemLayout}
+              label={<FormattedMessage id="form-basic-form1.round.label" />}
+            >
+              {getFieldDecorator('round', {
+                rules: [
+                  {
+                    required: true,
+                    message: formatMessage({
+                      id: 'form-basic-form1.round.required',
+                    }),
+                  },
+                ],
+              })(
+                <Input
+                  placeholder={formatMessage({
+                    id: 'form-basic-form1.round.placeholder',
+                  })}
+                />,
+              )}
+            </FormItem>
+
             <Divider
               style={{
                 marginBottom: 32,
