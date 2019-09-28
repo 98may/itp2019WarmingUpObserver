@@ -1,4 +1,4 @@
-const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
+const BASE_URL = `http://35.185.148.102:${process.env.PORT || 8080}`;
 
 describe('Homepage', () => {
   it('topmenu should have footer', async () => {
