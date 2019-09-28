@@ -23,13 +23,10 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-
 @connect(({ profileBasic2Js, loading }) => ({
   profileBasic2Js,
   loading: loading.effects['profileBasic2Js/fetchBasic'],
 }))
-
-
 class BasicForm2 extends Component {
   handleSubmit = e => {
     const { dispatch, form } = this.props;
@@ -37,7 +34,7 @@ class BasicForm2 extends Component {
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         dispatch({
-          type: 'formBasicForm2/submitRegularForm',
+          type: 'formBasicForm23/submitRegularForm',
           payload: values,
         });
       }
@@ -45,9 +42,8 @@ class BasicForm2 extends Component {
   };
 
   render() {
-
     // const { profileBasic2Js, loading } = this.props;
-    const { submitting, loading} = this.props;
+    const { submitting, loading } = this.props;
     const {
       form: { getFieldDecorator, getFieldValue },
     } = this.props;
@@ -85,7 +81,6 @@ class BasicForm2 extends Component {
       },
     };
 
-
     let newPhonesData = [
       {
         id: '1',
@@ -97,7 +92,7 @@ class BasicForm2 extends Component {
         price: '100',
         amount: '78000',
       },
-    ]
+    ];
 
     const newPhonesColumns = [
       {
@@ -157,14 +152,12 @@ class BasicForm2 extends Component {
         title: '数量（台）',
         dataIndex: 'num',
         key: 'num',
-        
       },
 
       {
         title: '金额',
         dataIndex: 'amount',
         key: 'amount',
-      
       },
     ];
 
@@ -191,7 +184,6 @@ class BasicForm2 extends Component {
               marginTop: 8,
             }}
           >
-           
             <FormItem
               {...formItemLayout}
               label={<FormattedMessage id="form-basic-form2.userId.label" />}
@@ -224,10 +216,7 @@ class BasicForm2 extends Component {
                 marginBottom: 32,
               }}
             />
-            
-        
-            
-            
+
             <FormItem
               {...formItemLayout}
               label={<FormattedMessage id="form-basic-form2.AInvest.label" />}
@@ -244,7 +233,7 @@ class BasicForm2 extends Component {
               })(
                 <Input
                   placeholder={formatMessage({
-                  id: 'form-basic-form2.AInvest.placeholder',
+                    id: 'form-basic-form2.AInvest.placeholder',
                   })}
                 />,
               )}
@@ -266,16 +255,14 @@ class BasicForm2 extends Component {
               })(
                 <Input
                   placeholder={formatMessage({
-                  id: 'form-basic-form2.BInvest.placeholder',
+                    id: 'form-basic-form2.BInvest.placeholder',
                   })}
-                // min={0}
-                // max={100}
+                  // min={0}
+                  // max={100}
                 />,
               )}
               {/* <span className="ant-form-text">万</span> */}
             </FormItem>
-
-
 
             <FormItem
               {...submitFormLayout}
@@ -303,6 +290,6 @@ class BasicForm2 extends Component {
 
 export default Form.create()(
   connect(({ loading }) => ({
-    submitting: loading.effects['formBasicForm2/submitRegularForm'],
+    submitting: loading.effects['formBasicForm23/submitRegularForm'],
   }))(BasicForm2),
 );

@@ -29,7 +29,7 @@ class BasicForm3 extends Component {
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         dispatch({
-          type: 'formBasicForm3/submitRegularForm',
+          type: 'formBasicForm33/submitRegularForm',
           payload: values,
         });
       }
@@ -84,7 +84,6 @@ class BasicForm3 extends Component {
               marginTop: 8,
             }}
           >
-           
             <FormItem
               {...formItemLayout}
               label={<FormattedMessage id="form-basic-form3.userId.label" />}
@@ -112,7 +111,7 @@ class BasicForm3 extends Component {
                 marginBottom: 32,
               }}
             />
-            
+
             <FormItem
               {...formItemLayout}
               label={<FormattedMessage id="form-basic-form3.AdInvest.label" />}
@@ -129,14 +128,11 @@ class BasicForm3 extends Component {
               })(
                 <Input
                   placeholder={formatMessage({
-                  id: 'form-basic-form3.AdInvest.placeholder',
+                    id: 'form-basic-form3.AdInvest.placeholder',
                   })}
                 />,
               )}
             </FormItem>
-     
-
-
 
             <FormItem
               {...submitFormLayout}
@@ -164,6 +160,6 @@ class BasicForm3 extends Component {
 
 export default Form.create()(
   connect(({ loading }) => ({
-    submitting: loading.effects['formBasicForm3/submitRegularForm'],
+    submitting: loading.effects['formBasicForm33/submitRegularForm'],
   }))(BasicForm3),
 );

@@ -16,16 +16,12 @@ import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { connect } from 'dva';
 import styles from './style.less';
 
-
 //below   from profile ！！！！！！！@may
-import {  Divider } from 'antd';
+import { Divider } from 'antd';
 // import React, { Component } from 'react';
 // import { PageHeaderWrapper } from '@ant-design/pro-layout';
 // import { connect } from 'dva';
 // import styles from './style.less';
-
-
-
 
 const FormItem = Form.Item;
 const { Option } = Select;
@@ -39,7 +35,7 @@ class BasicForm1 extends Component {
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         dispatch({
-          type: 'formBasicForm1/submitRegularForm',
+          type: 'formBasicForm11/submitRegularForm',
           payload: values,
         });
       }
@@ -85,10 +81,6 @@ class BasicForm1 extends Component {
       },
     };
 
-
-
-
-
     // return (
     //   <PageHeaderWrapper>
     //     <Card bordered={false}>
@@ -126,7 +118,6 @@ class BasicForm1 extends Component {
     //         }}
     //       />
 
-
     //       {/* <div className={styles.title}>退货商品</div>
     //       <Table
     //         style={{
@@ -153,10 +144,6 @@ class BasicForm1 extends Component {
     //   </PageHeaderWrapper>
     // );
 
-
-
-
-
     return (
       <PageHeaderWrapper content={<FormattedMessage id="form-basic-form1.basic.description" />}>
         <Card bordered={false}>
@@ -167,8 +154,6 @@ class BasicForm1 extends Component {
               marginTop: 8,
             }}
           >
-
-
             <FormItem
               {...formItemLayout}
               label={<FormattedMessage id="form-basic-form1.userId.label" />}
@@ -185,7 +170,7 @@ class BasicForm1 extends Component {
               })(
                 <Input
                   placeholder={formatMessage({
-                  id: 'form-basic-form1.userId.placeholder',
+                    id: 'form-basic-form1.userId.placeholder',
                   })}
                 />,
               )}
@@ -230,7 +215,6 @@ class BasicForm1 extends Component {
               }}
             />
 
-           
             <FormItem
               {...submitFormLayout}
               style={{
@@ -257,6 +241,6 @@ class BasicForm1 extends Component {
 
 export default Form.create()(
   connect(({ loading }) => ({
-    submitting: loading.effects['formBasicForm1/submitRegularForm'],
+    submitting: loading.effects['formBasicForm11/submitRegularForm'],
   }))(BasicForm1),
 );

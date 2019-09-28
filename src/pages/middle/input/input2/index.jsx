@@ -23,13 +23,10 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-
 @connect(({ profileBasic2Js, loading }) => ({
   profileBasic2Js,
   loading: loading.effects['profileBasic2Js/fetchBasic'],
 }))
-
-
 class BasicForm2 extends Component {
   handleSubmit = e => {
     const { dispatch, form } = this.props;
@@ -37,7 +34,7 @@ class BasicForm2 extends Component {
     form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         dispatch({
-          type: 'formBasicForm2/submitRegularForm',
+          type: 'formBasicForm22/submitRegularForm',
           payload: values,
         });
       }
@@ -45,9 +42,8 @@ class BasicForm2 extends Component {
   };
 
   render() {
-
     // const { profileBasic2Js, loading } = this.props;
-    const { submitting, loading} = this.props;
+    const { submitting, loading } = this.props;
     const {
       form: { getFieldDecorator, getFieldValue },
     } = this.props;
@@ -85,7 +81,6 @@ class BasicForm2 extends Component {
       },
     };
 
-
     let newPhonesData = [
       {
         id: '1',
@@ -97,7 +92,7 @@ class BasicForm2 extends Component {
         price: '100',
         amount: '78000',
       },
-    ]
+    ];
 
     const newPhonesColumns = [
       {
@@ -221,7 +216,6 @@ class BasicForm2 extends Component {
               marginTop: 8,
             }}
           >
-           
             <FormItem
               {...formItemLayout}
               label={<FormattedMessage id="form-basic-form2.userId.label" />}
@@ -243,12 +237,6 @@ class BasicForm2 extends Component {
                 />,
               )}
             </FormItem>
-
-           
-          
-          
-
-
 
             {/* <FormItem
               {...formItemLayout}
@@ -416,7 +404,7 @@ class BasicForm2 extends Component {
               })(
                 <Input
                   placeholder={formatMessage({
-                  id: 'form-basic-form2.amount.placeholder',
+                    id: 'form-basic-form2.amount.placeholder',
                   })}
                 />,
               )}
@@ -427,8 +415,6 @@ class BasicForm2 extends Component {
                 marginBottom: 32,
               }}
             />
-
-
 
             <div className={styles.title}>本轮手机生产计划</div>
             <Table
@@ -441,7 +427,6 @@ class BasicForm2 extends Component {
               columns={newPhonesColumns}
               rowKey="id"
             />
-
 
             <FormItem
               {...submitFormLayout}
@@ -469,6 +454,6 @@ class BasicForm2 extends Component {
 
 export default Form.create()(
   connect(({ loading }) => ({
-    submitting: loading.effects['formBasicForm2/submitRegularForm'],
+    submitting: loading.effects['formBasicForm22/submitRegularForm'],
   }))(BasicForm2),
 );
